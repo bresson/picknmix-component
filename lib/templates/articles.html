@@ -25,11 +25,15 @@
 	<ul class="pickNMixWidgetArticles">
 		{{#articles}}
 		<li class="pickNMixWidgetArticle">
-			<a class="mainlink" href="{{url}}">
-				<p class="ft-lead ft-lead-large">{{title}}</p>
+			<div>
+        <a href="{{url}}" class="ft-lead ft-lead-large">
+          {{title}}
+        </a>
 				{{#image}}<img src="{{image}}" />{{/image}}
-				<p>{{summary}}</p>
-			</a>
+				<p class="summary">
+          {{summary}}
+        </p>
+			</div>
 		</li>
 		{{/articles}}
 	</ul>
