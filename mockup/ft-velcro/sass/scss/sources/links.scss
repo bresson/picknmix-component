@@ -1,0 +1,21 @@
+/** links.scss */
+
+.ft-link {
+    color: $ftColor-Blue;
+}
+
+.ft-link:hover {
+    color: #000;
+}
+
+.ft-link-stealth {
+    color: inherit;
+}
+
+.msie7 .ft-link-stealth {
+    color:expression(this.parentNode.currentStyle['color']);
+}
+
+.ft-link-stealth:hover {
+    color: $ftColor-Blue;
+}

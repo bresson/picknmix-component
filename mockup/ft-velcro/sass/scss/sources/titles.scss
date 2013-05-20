@@ -1,0 +1,42 @@
+/** titles.scss */
+
+.ft-title {
+    margin: 0 0 5px 0;
+    font-family: $ftFont-Georgia;
+    color: #333;
+}
+
+.ft-title-large {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.ft-title-small {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.ft-lead {
+    margin: 0 0 5px 0;
+    font-family: $ftFont-Benton;
+    color: #505050;
+}
+
+.ft-lead-large {
+    font-family: $ftFont-Georgia;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.ft-lead-small {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.ft-byline {
+    font-family: $ftFont-Benton;
+    clear: left;
+    margin:15px 0 0 0;
+    color: #666;
+}

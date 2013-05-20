@@ -9,37 +9,26 @@
 	<script type="text/javascript">
 		$(function() {
 
-			var optionclickcallbacks = {
-				"add": function() {
-					var newvisibility, newsearch;
+			$(".pickNMixSearchChooser").delegate(".option.add", "click", function() {
+				var newsearch = $(this).closest(".pickNMixSearchChooser").find(".newSearch");
 
-					newsearch = $(this).closest(".pickNMixSearchChooser").find(".newSearch");
-
-					if ($(this).hasClass("active")) {
-						newsearch.css("visibility", "visible");
-					} else {
-						newsearch.css("visibility", "hidden");
-					}
-				},
-				"search": function() {
-					$(this).siblings(".option.search.active").removeClass("active");
+				if ($(this).hasClass("active")) {
+					newsearch.css("visibility", "hidden");
+				} else {
+					newsearch.css("visibility", "visible");
 				}
-			}
-
-			$(".pickNMixSearchChooser").delegate(".option", "click", function() {
-				var i, callbacks, numcallbacks;
 
 				$(this).toggleClass("active");
+			});
 
-				for (classname in optionclickcallbacks) {
-					if ($(this).hasClass(classname)) {
-						optionclickcallbacks[classname].apply(this);
-					}
+			$(".pickNMixSearchChooser").delegate(".option.search", "click", function() {
+				$(this).siblings(".option.search.active").removeClass("active");
+				if (!$(this).hasClass("active")) {
+					$(this).addClass("active");
 				}
 			});
 
 			$(".pickNMixSearchChooser").delegate(".newSearch", "submit", function() {
-				console.log("Adding new search '"+$(this).find(".searchterm").val()+"'");
 				$(this).closest(".pickNMixSearchChooser").find(".option.button.add").removeClass("active");
 				$(this).css("visibility", "hidden");
 				return false;

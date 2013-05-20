@@ -1,7 +1,16 @@
-<ul>
-  {{#searches}}
-  <li>
-    Hello {{label}}
-  </li>
-  {{/searches}}
-</ul>
+
+<div class="pickNMixSearchChooser">
+	<ul class="options">
+		{{#searches}}
+		<li class="option search" data-id="{{id}}">{{label}}<span class="remove">x</span></li>
+		{{/searches}}
+		<li class="option button add">+</li>
+	</ul>
+	<form class="newSearch">
+		<input name="searchterm" class="searchterm" value="" />
+		<button name="addsearch" class="addsearch">Add search</button>
+	</form>
+	<div class="clearer"></div>
+</div>
+
+
