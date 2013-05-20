@@ -1,1 +1,3 @@
-module.export = require("./lib/picknmix")();
+window.onload = function() {
+  require("./lib/picknmix")();
+};
