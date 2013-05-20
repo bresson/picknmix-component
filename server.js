@@ -15,6 +15,9 @@ app.get('/', function(req, res) {
 });
 
 app.use(express.static(__dirname+'/lib/images'));
+app.use(express.static(__dirname+'/lib/ft-velcro/distribution'));
+app.use(express.static(__dirname+'/lib/ft-velcro/font/ft-velcro'));
+app.use(express.static(__dirname+'/lib/ft-velcro/img/ft-velcro'));
 
 
 app.listen(3000, function() {
