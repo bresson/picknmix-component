@@ -8,6 +8,7 @@
 
 	.pickNMixWidgetArticle {
 		clear:both;
+		font-family: BentonSans,Helvetica,Arial,sans-serif;
 	}
 
 </style>
@@ -16,7 +17,7 @@
 	<ul class="pickNMixWidgetArticles">
 		{{#articles}}
 		<li class="pickNMixWidgetArticle">
-			<h3>{{title}}</h3>
+			<p class="ft-lead ft-lead-large">{{title}}</p>
 			{{#image}}<img src="{{image}}" />{{/image}}
 			<p>{{summary}}</p>
 		</li>
