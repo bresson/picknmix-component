@@ -36,7 +36,13 @@
 						optionclickcallbacks[classname].apply(this);
 					}
 				}
+			});
 
+			$(".pickNMixSearchChooser").delegate(".newSearch", "submit", function() {
+				console.log("Adding new search '"+$(this).find(".searchterm").val()+"'");
+				$(this).closest(".pickNMixSearchChooser").find(".option.button.add").removeClass("active");
+				$(this).css("visibility", "hidden");
+				return false;
 			});
 
 			$(".pickNMixSearchChooser .option.search[data-id=1]").click();
