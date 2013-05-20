@@ -1,5 +1,8 @@
-var picknmix = require("./lib/picknmix");
+var Picknmix = require("./lib/picknmix");
 
 window.onload = function() {
-  picknmix.init();
+  Picknmix.init();
 };
+
+// Expose as global object
+window.Picknmix = Picknmix;
