@@ -1,11 +1,13 @@
 
 <div class="pickNMixSearchChooser">
-	<ul class="options">
-		{{#searches}}
-		<li class="option search" data-id="{{id}}">{{label}}<span class="remove">x</span></li>
-		{{/searches}}
-		<li class="option button add">+</li>
-	</ul>
+	<div class="ft-header-medium ft-header-medium-tabs">
+		<ul class="options ft-tabs-large">
+			{{#searches}}
+			<li class="ft-tab-large option search" data-id="{{id}}"><a href='javascript:void(0)'>{{label}}<span class="remove">x</span></a></li>
+			{{/searches}}
+			<li class="ft-tab-large option button add"><a href='javascript:void(0)'>+</a></li>
+		</ul>
+	</div>
 	<form class="newSearch">
 		<input name="searchterm" class="searchterm" value="" />
 		<button name="addsearch" class="addsearch">Add search</button>
