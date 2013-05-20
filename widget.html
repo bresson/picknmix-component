@@ -20,6 +20,9 @@
 					} else {
 						newsearch.css("visibility", "hidden");
 					}
+				},
+				"search": function() {
+					$(this).siblings(".option.search.active").removeClass("active");
 				}
 			}
 
@@ -35,6 +38,8 @@
 				}
 
 			});
+
+			$(".pickNMixSearchChooser .option.search[data-id=1]").click();
 		});
 	</script>
 
@@ -60,6 +65,12 @@
 
 		.pickNMixSearchChooser .option.add.active {
 			background-color:black;
+			color:white;
+			font-weight:bold;
+		}
+
+		.pickNMixSearchChooser .option.search.active {
+			background-color:green;
 			color:white;
 			font-weight:bold;
 		}
@@ -99,9 +110,9 @@
 
 <div class="pickNMixSearchChooser">
 	<ul class="options">
-		<li class="option search">Term 1 <span class="remove">x</span></li>
-		<li class="option search">Term 2 <span class="remove">x</span></li>
-		<li class="option search">Term 3 <span class="remove">x</span></li>
+		<li class="option search" data-id="1">Term 1 <span class="remove">x</span></li>
+		<li class="option search" data-id="2">Term 2 <span class="remove">x</span></li>
+		<li class="option search" data-id="3">Term 3 <span class="remove">x</span></li>
 		<li class="option button add">+</li>
 	</ul>
 	<form class="newSearch">
