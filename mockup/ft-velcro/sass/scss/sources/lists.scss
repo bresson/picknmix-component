@@ -1,0 +1,38 @@
+/** Lists */
+
+.ft-list {
+    margin: 0;
+    padding: 0;
+    font-family: $ftFont-Benton;
+    font-size: 13px;
+    line-height: 21px;
+    color: $ftColor-CoolGrey1;
+}
+
+.ft-list-item {
+    margin: 0;
+    padding: 0;
+}
+
+.ft-list-bulletted .ft-list-item,
+.ft-list-numbered .ft-list-item {
+    margin-left: 18px;
+}
+
+.ft-list-plain .ft-list-item {
+    list-style-type: none;
+}
+
+.ft-list-bulletted .ft-list-item {
+    list-style-type: disc;
+}
+
+.ft-list-numbered .ft-list-item {
+    list-style-type: decimal;
+}
+
+.ft-list-wrapping .ft-list-item {
+    float: left;
+    clear: none;
+    margin-right: 18px;
+}

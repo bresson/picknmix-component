@@ -1,7 +1,14 @@
-<ul>
-  {{#articles}}
-  <li>
-    Hello {{headline}}
-  </li>
-  {{/articles}}
-</ul>
+
+<div class="pickNMixWidget">
+	<ul>
+		{{#articles}}
+		<li>
+			<h3>{{headline}}</h3>
+			{{#imageurl}}<img src="{{imageurl}}" />{{/imageurl}}
+			<p>{{abstract}}</p>
+		</li>
+		{{/articles}}
+	</ul>
+</div>
+
+
