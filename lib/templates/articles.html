@@ -11,15 +11,23 @@
 		font-family: BentonSans,Helvetica,Arial,sans-serif;
 	}
 
+	.pickNMixWidgetArticle a.mainlink {
+		text-decoration:none;
+		color:inherit;
+		display:block;
+	}
+
 </style>
 
 <div class="pickNMixWidget">
 	<ul class="pickNMixWidgetArticles">
 		{{#articles}}
 		<li class="pickNMixWidgetArticle">
-			<p class="ft-lead ft-lead-large">{{title}}</p>
-			{{#image}}<img src="{{image}}" />{{/image}}
-			<p>{{summary}}</p>
+			<a class="mainlink" href="{{url}}">
+				<p class="ft-lead ft-lead-large">{{title}}</p>
+				{{#image}}<img src="{{image}}" />{{/image}}
+				<p>{{summary}}</p>
+			</a>
 		</li>
 		{{/articles}}
 	</ul>
