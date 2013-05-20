@@ -8,22 +8,38 @@
 
 	<script type="text/javascript">
 		$(function() {
-			$(".pickNMixSearchChooser").delegate(".option.button.add", "click", function() {
-				var newvisibility, newsearch;
 
-				newsearch = $(this).closest(".pickNMixSearchChooser").find(".newSearch");
+			var optionclickcallbacks = {
+				"add": function() {
+					var newvisibility, newsearch;
 
-				if ($(this).hasClass("active")) {
-					newsearch.css("visibility", "hidden");
-					$(this).removeClass("active");
-				} else {
-					newsearch.css("visibility", "visible");
-					$(this).addClass("active");
+					newsearch = $(this).closest(".pickNMixSearchChooser").find(".newSearch");
+
+					if ($(this).hasClass("active")) {
+						newsearch.css("visibility", "visible");
+					} else {
+						newsearch.css("visibility", "hidden");
+					}
+				},
+				"search": function() {
+					$(this).siblings(".option.search.active").removeClass("active");
+				}
+			}
+
+			$(".pickNMixSearchChooser").delegate(".option", "click", function() {
+				var i, callbacks, numcallbacks;
+
+				$(this).toggleClass("active");
+
+				for (classname in optionclickcallbacks) {
+					if ($(this).hasClass(classname)) {
+						optionclickcallbacks[classname].apply(this);
+					}
 				}
 
-				newsearch.css("visibility", newvisibility);
-
 			});
+
+			$(".pickNMixSearchChooser .option.search[data-id=1]").click();
 		});
 	</script>
 
@@ -49,6 +65,12 @@
 
 		.pickNMixSearchChooser .option.add.active {
 			background-color:black;
+			color:white;
+			font-weight:bold;
+		}
+
+		.pickNMixSearchChooser .option.search.active {
+			background-color:green;
 			color:white;
 			font-weight:bold;
 		}
@@ -88,9 +110,9 @@
 
 <div class="pickNMixSearchChooser">
 	<ul class="options">
-		<li class="option search">Term 1 <span class="remove">x</span></li>
-		<li class="option search">Term 2 <span class="remove">x</span></li>
-		<li class="option search">Term 3 <span class="remove">x</span></li>
+		<li class="option search" data-id="1">Term 1 <span class="remove">x</span></li>
+		<li class="option search" data-id="2">Term 2 <span class="remove">x</span></li>
+		<li class="option search" data-id="3">Term 3 <span class="remove">x</span></li>
 		<li class="option button add">+</li>
 	</ul>
 	<form class="newSearch">
