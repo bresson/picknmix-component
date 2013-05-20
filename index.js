@@ -1,3 +1,5 @@
+var picknmix = require("./lib/picknmix");
+
 window.onload = function() {
-  require("./lib/picknmix")();
+  picknmix.init();
 };
