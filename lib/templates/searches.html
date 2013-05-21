@@ -16,6 +16,27 @@
 		font: bold 18px BentonSans;
 		color: #777;
 		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	.pnm-bar_current:hover {
+		background: #F7EDE1;
+	}
+
+	/** Search List
+	 ---------------------------------------------------------*/
+
+	.pnm-bar_search-list {
+		display: none;
+		background: #777;
+		font: 16px BentonSans;
+		box-shadow:
+			0 1px 2px rgba(0,0,0,0.2) inset,
+			0 1px 0 rgba(255,255,255,1);
+	}
+
+	.is-open .pnm-bar_search-list {
+		display: block;
 	}
 
 	/** Search
@@ -23,8 +44,25 @@
 
 	.pnm-bar_search {
 		padding: 14px;
-		background: #F6E9D8;
-		border-top: solid 2px #FFF1E0;
+	}
+
+	.pnm-bar_search input {
+		background: #666;
+	}
+
+	/** Search Item
+	 ---------------------------------------------------------*/
+
+	.pnm-bar_search-item {
+		display: block;
+		padding: 14px;
+		color: #FFF;
+		border-bottom: solid 1px #888;
+		text-transform: capitalize;
+	}
+
+	.pnm-bar_search-item:hover {
+		background: rgba(255,255,255,0.02);
 	}
 
 	/** Arrow

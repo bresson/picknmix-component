@@ -47,6 +47,30 @@
 		font: 16px MillerDisplay;
 	}
 
+	/** Loading
+	 ---------------------------------------------------------*/
+
+	.pnm-loading {
+	 	display: none
+	}
+
+	/**
+	 * @loading
+	 */
+
+	.loading .pnm-loading {
+		display: block;
+	}
+
+	/** Loading Text
+	 ---------------------------------------------------------*/
+
+	.pnm-loading_text {
+		margin-bottom: 14px;
+		font: 18px BentonSans;
+		text-align: center;
+	}
+
 </style>
 
 <div class="pnm-widget">
@@ -59,6 +83,14 @@
 		</li>
 		{{/articles}}
 	</ul>
+	<div class='pnm-loading'>
+		<div class='pnm-loading_text'>Articles loading...</div>
+		<div class='progress-bar'>
+			<div class='inner'>
+				<div class='inner'></div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
