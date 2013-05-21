@@ -12,7 +12,8 @@
     "browserify": "*",
     "backbone": "*",
     "hogan.js": "*",
-    "brfs": "*"
+    "brfs": "*",
+    "express": "~3.2.4"
   },
   "devDependencies": {
     "mocha": "*",

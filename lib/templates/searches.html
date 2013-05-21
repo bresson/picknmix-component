@@ -1,64 +1,39 @@
 
 <style type="text/css">
 
-	.pickNMixSearchChooser .option {
-		text-transform:uppercase;
-		position:relative;
+	/** Bar
+	 ---------------------------------------------------------*/
+
+	.pnm-bar {
+		margin-bottom: 14px;
 	}
 
-	.pickNMixSearchChooser .search {
+	/** Current
+	 ---------------------------------------------------------*/
 
-		/* Add space for the remove button */
-		padding-right:20px;
+	.pnm-bar_current {
+		padding: 14px;
+		background: #F6E9D8;
+		font: 18px BentonSans;
+		color: #505050;
 	}
 
-	.pickNMixSearchChooser .option .remove {
-		position:absolute;
-		right:5px;
+	.pnm-bar_search {
+		padding: 14px;
+		background: #F6E9D8;
+		border-top: solid 2px #FFF1E0;
 	}
 
-	.pickNMixSearchChooser .clearer {
-		clear:both;
-	}
-
-	.pickNMixSearchChooser .newSearch {
-		clear:both;
-		visibility:hidden;
-		padding-top:5px;
-		width:100%;
-		padding-right:95px;
-		box-sizing:border-box;
-		position:relative;
-	}
-
-	.pickNMixSearchChooser .newSearch .searchterm {
-		width:100%;
-	}
-
-	.pickNMixSearchChooser .newSearch .addsearch {
-		position:absolute;
-		right:0;
-		top:5px;
-		width:82px;
-	}
 </style>
 
-<div class="pickNMixSearchChooser">
-	<div class="ft-header-medium ft-header-medium-tabs">
-		<ul class="options ft-tabs-large">
-			{{#searches}}
-			<li class="ft-tab-large option search">
-      <a class='ft-tab-title' data-term="{{term}}" href='javascript:void(0)'>{{label}}<span class="remove">x</span></a>
-      </li>
-			{{/searches}}
-			<li class="ft-tab-large option button add"><a class='ft-tab-title' href='javascript:void(0)'>+</a></li>
-		</ul>
+<div class="pnm-bar">
+	<div class="pnm-bar_current js-current-search">Current term</div>
+	<div class="pnm-bar_search-list">
+	{{#searches}}
+		<div class="pnm-bar_search-item">{{label}}</div>
+	{{/searches}}
+		<form class="pnm-bar_search">
+			<input class="search" type="text" name="searchterm" value="" placeholder="Add a new section..."/>
+		</form>
 	</div>
-	<form class="newSearch">
-		<input name="searchterm" class="searchterm" value="" />
-		<button class="ft-button ft-button-medium addsearch"><span><span>Add search</span></span></button>
-	</form>
-	<div class="clearer"></div>
 </div>
-
-
