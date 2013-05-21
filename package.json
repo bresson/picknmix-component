@@ -12,6 +12,7 @@
     "browserify": "*",
     "backbone": "*",
     "hogan.js": "*",
+    "express": "*",
     "brfs": "*"
   },
   "devDependencies": {
