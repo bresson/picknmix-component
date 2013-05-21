@@ -1,6 +1,7 @@
 var browserify = require('browserify');
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname+'/public'));
 
@@ -12,6 +13,6 @@ app.get('/app.js', function(req, res){
   b.bundle().pipe(res);
 });
 
-app.listen(3000, function() {
-  console.log("Running on http://localhost:3000")
+app.listen(port, function() {
+  console.log("Running on http://localhost:" + port)
 });
