@@ -13,14 +13,18 @@
 	.pnm-bar_current {
 		padding: 14px;
 		background: #F6E9D8;
-		font: bold 18px BentonSans;
+		font: 18px BentonSans;
 		color: #777;
 		text-transform: uppercase;
 		cursor: pointer;
+		box-shadow:
+			0 -1px 0 rgba(0,0,0,0.08) inset,
+			0 1px 0 rgba(255,255,255,0.9)
 	}
 
 	.pnm-bar_current:hover {
 		background: #F7EDE1;
+		color: #333;
 	}
 
 	/** Search List
@@ -48,6 +52,7 @@
 
 	.pnm-bar_search input {
 		background: #666;
+		color: rgba(255,255,255,0.9);
 	}
 
 	/** Search Item
@@ -70,12 +75,12 @@
 
 	.pnm-bar_arrow {
 		float: right;
-		color: #777;
-		opacity: 0.7;
+		color: #999;
+		-webkit-transition: -webkit-transform 180ms;
 	}
 
 	.pnm-bar_current:hover .pnm-bar_arrow {
-		opacity: 1;
+		color: #333;
 	}
 
 	.is-open .pnm-bar_arrow {
