@@ -1,38 +1,48 @@
 <style type="text/css">
 
-	.pickNMixWidgetArticle img {
-		float:left;
-		margin:0 10px 10px 0;
+	.pnm-widget {
+		padding: 14px;
 	}
 
-	.pickNMixWidgetArticle {
-		clear:both;
-		font-family: BentonSans,Helvetica,Arial,sans-serif;
-		margin-bottom:30px;
-		overflow:hidden;
+	.pnm-article img {
+
 	}
 
-	.pickNMixWidgetArticle a.mainlink {
+	.pnm-article {
+		margin-bottom: 14px;
+		padding-bottom: 14px;
+		border-bottom: dotted 1px #A7A59B;
+		font-family: BentonSans, sans-serif;
+		overflow: hidden;
+	}
+
+	.pnm-article a.mainlink {
 		text-decoration:none;
 		color:inherit;
 		display:block;
 	}
 
+	.ft-lead {
+		display: block;
+	}
+
+	/** Article Image
+	 ---------------------------------------------------------*/
+
+	.pnm-article_image {
+		float:left;
+		margin: 0.25em 14px 0 0;
+	}
+
 </style>
 
-<div class="pickNMixWidget">
-	<ul class="pickNMixWidgetArticles">
+<div class="pnm-widget">
+	<ul class="pnm-articles">
 		{{#articles}}
-		<li class="pickNMixWidgetArticle">
-			<div>
-        <a href="{{url}}" class="ft-lead ft-lead-large">
-          {{title}}
-        </a>
-				{{#image}}<img src="{{image}}" />{{/image}}
-				<p class="summary">
-          {{summary}}
-        </p>
-			</div>
+		<li class="pnm-article">
+        <a href="{{url}}" class="ft-lead ft-lead-large">{{title}}</a>
+				{{#image}}<img class="pnm-article_image" src="{{image}}" />{{/image}}
+				<p class="summary">{{summary}}</p>
 		</li>
 		{{/articles}}
 	</ul>

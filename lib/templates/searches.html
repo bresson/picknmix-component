@@ -17,22 +17,42 @@
 		color: #505050;
 	}
 
+	/** Search
+	 ---------------------------------------------------------*/
+
 	.pnm-bar_search {
 		padding: 14px;
 		background: #F6E9D8;
 		border-top: solid 2px #FFF1E0;
 	}
 
+	/** Arrow
+	 ---------------------------------------------------------*/
+
+	.pnm-bar_arrow {
+		float: right;
+		color: #777;
+		opacity: 0.7;
+	}
+
+	.pnm-bar_current:hover .pnm-bar_arrow {
+		opacity: 1;
+	}
+
+	.is-open .pnm-bar_arrow {
+		-webkit-transform: rotate(90deg);
+	}
+
 </style>
 
 <div class="pnm-bar">
-	<div class="pnm-bar_current js-current-search">Current term</div>
+	<div class="pnm-bar_current js-current-search">Current term <div class="pnm-bar_arrow">▶</div></div>
 	<div class="pnm-bar_search-list">
 	{{#searches}}
 		<div class="pnm-bar_search-item">{{label}}</div>
 	{{/searches}}
 		<form class="pnm-bar_search">
-			<input class="search" type="text" name="searchterm" value="" placeholder="Add a new section..."/>
+			<input class="search" type="text" name="searchterm" value="" placeholder="Add new section..."/>
 		</form>
 	</div>
 </div>
