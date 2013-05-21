@@ -92,6 +92,7 @@
 
 	.pnm-bar_arrow {
 		float: right;
+		margin-top: -2px;
 		color: #999;
 		-webkit-transition: -webkit-transform 180ms;
 	}
@@ -101,13 +102,13 @@
 	}
 
 	.is-open .pnm-bar_arrow {
-		-webkit-transform: rotate(90deg);
+		-webkit-transform: rotate(-90deg);
 	}
 
 </style>
 
 <div class="pnm-bar">
-	<div class="pnm-bar_current js-current-search">Current term <div class="pnm-bar_arrow">▶</div></div>
+	<div class="pnm-bar_current"><span class="js-current-search">Current term</span><div class="pnm-bar_arrow">◀</div></div>
 	<div class="pnm-bar_search-list js-list">
 		<div class="js-inner-list">
 	    <div class="search-items"></div>
