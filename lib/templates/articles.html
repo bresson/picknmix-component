@@ -34,17 +34,37 @@
 	/** Article Image
 	 ---------------------------------------------------------*/
 
-	.pnm-article_image {
+	.pnm-article_image,
+	.media-small .pnm-article_image {
 		float:left;
 		margin: 0.25em 14px 0 0;
+		max-width: 100%;
+	}
+
+	@media (min-width: 500px) {
+		.pnm-article_image {
+			width: 200px;
+		}
 	}
 
 	/** Summary
 	 ---------------------------------------------------------*/
 
-	.pnm-article_summary {
+	.pnm-article_body {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 4;
+		overflow: hidden;
 		margin: 0;
-		font: 16px MillerDisplay;
+		font: 16px/1.3 MillerDisplay;
+	}
+
+	/**
+	 * @image
+	 */
+
+	.pnm-article_image + .pnm-article_body {
+		-webkit-line-clamp: 6;
 	}
 
 	/** Loading
@@ -79,8 +99,8 @@
 		{{#articles}}
 		<li class="pnm-article">
         <a href="{{url}}" class="ft-lead ft-lead-large">{{title}}</a>
-				{{#image}}<img class="pnm-article_image" src="{{image}}" />{{/image}}
-				<div class="pnm-article_summary">{{summary}}</div>
+				{{#image}}<img class="pnm-article_image" src="http://src.sencha.io/500/{{image}}" />{{/image}}
+				<div class="pnm-article_body">{{body}}</div>
 		</li>
 		{{/articles}}
 	</ul>
