@@ -100,7 +100,7 @@
     {{#articles}}
     <a class="pnm-article" href="{{url}}">
       <div class="ft-lead ft-lead-large">{{title}}</div>
-      {{#image}}<img class="pnm-article_image" src="http://src.sencha.io/500/{{image}}" />{{/image}}
+      {{#image}}<img class="pnm-article_image" src="http://src.sencha.io/500/{{image}}" onerror="this.style.display='none'" />{{/image}}
       <div class="pnm-article_body">{{body}}</div>
     </a>
     {{/articles}}
