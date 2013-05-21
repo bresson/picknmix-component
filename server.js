@@ -12,6 +12,6 @@ app.get('/app.js', function(req, res){
   b.bundle().pipe(res);
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Running on http://localhost:3000")
 });
