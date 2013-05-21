@@ -8,6 +8,7 @@
 	 ---------------------------------------------------------*/
 
 	.pnm-article {
+		display: block;
 		margin-bottom: 14px;
 		padding-bottom: 14px;
 		border-bottom: dotted 1px #A7A59B;
@@ -97,11 +98,11 @@
 <div class="pnm-widget">
 	<ul class="pnm-articles">
 		{{#articles}}
-		<li class="pnm-article">
-        <a href="{{url}}" class="ft-lead ft-lead-large">{{title}}</a>
+		<a class="pnm-article">
+        <div href="{{url}}" class="ft-lead ft-lead-large">{{title}}</div>
 				{{#image}}<img class="pnm-article_image" src="http://src.sencha.io/500/{{image}}" />{{/image}}
 				<div class="pnm-article_body">{{body}}</div>
-		</li>
+		</a>
 		{{/articles}}
 	</ul>
 	<div class='pnm-loading'>
