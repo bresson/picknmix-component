@@ -1,12 +1,11 @@
 <style type="text/css">
 
 	.pnm-widget {
-		padding: 14px;
+		padding: 0 14px 14px;
 	}
 
-	.pnm-article img {
-
-	}
+	/** Article
+	 ---------------------------------------------------------*/
 
 	.pnm-article {
 		margin-bottom: 14px;
@@ -16,14 +15,20 @@
 		overflow: hidden;
 	}
 
+	.pnm-article:last-child {
+		border: 0;
+	}
+
 	.pnm-article a.mainlink {
-		text-decoration:none;
-		color:inherit;
-		display:block;
+		display: block;
+		text-decoration: none;
+		color: inherit;
 	}
 
 	.ft-lead {
 		display: block;
+		color: #000;
+		font: 24px/1.3em MillerDisplay;
 	}
 
 	/** Article Image
@@ -34,6 +39,14 @@
 		margin: 0.25em 14px 0 0;
 	}
 
+	/** Summary
+	 ---------------------------------------------------------*/
+
+	.pnm-article_summary {
+		margin: 0;
+		font: 16px MillerDisplay;
+	}
+
 </style>
 
 <div class="pnm-widget">
@@ -42,7 +55,7 @@
 		<li class="pnm-article">
         <a href="{{url}}" class="ft-lead ft-lead-large">{{title}}</a>
 				{{#image}}<img class="pnm-article_image" src="{{image}}" />{{/image}}
-				<p class="summary">{{summary}}</p>
+				<div class="pnm-article_summary">{{summary}}</div>
 		</li>
 		{{/articles}}
 	</ul>
